@@ -51,6 +51,11 @@ const icons = {
   em: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></svg>',
 };
 
+// "995597060888" -> "597 06 08 88"
+const waNumber = CONTACT.whatsapp.slice(3).replace(/(\d{3})(\d{2})(\d{2})(\d{2})/, "$1 $2 $3 $4");
+// the "Get in touch" buttons open WhatsApp directly (without JS they still scroll to #contact)
+if (CONTACT.whatsapp) $$('a[href="#contact"]').forEach(a => { a.href = `https://wa.me/${CONTACT.whatsapp}`; a.target = "_blank"; a.rel = "noopener"; });
+
 function renderContact() {
   const items = [
     CONTACT.whatsapp && { k: "wa", cls: "btn btn-accent", href: `https://wa.me/${CONTACT.whatsapp}` },
@@ -58,7 +63,7 @@ function renderContact() {
     CONTACT.email && { k: "em", cls: "btn btn-ghost", href: `mailto:${CONTACT.email}` },
   ].filter(Boolean);
   $("#contactBtns").innerHTML = items.length
-    ? items.map(i => `<a class="${i.cls}" href="${i.href}" target="_blank" rel="noopener">${icons[i.k]}<span>${t(i.k)}</span></a>`).join("")
+    ? items.map(i => `<a class="${i.cls}" href="${i.href}" target="_blank" rel="noopener">${icons[i.k]}<span>${i.k === "wa" ? t(i.k) + " · " + waNumber : i.k === "em" ? CONTACT.email : t(i.k)}</span></a>`).join("")
     : `<p class="empty">${t("empty")}</p>`;
 }
 
