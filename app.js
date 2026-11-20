@@ -19,7 +19,7 @@ const EN = {
   wTitle: "Work", wSub: "Three live sites. Open one and try it the way your customers would.",
   k1: "Café & restaurant", d1: "Menu, events and online table booking. Every booking goes straight to the owner's phone.",
   k2: "Flower shop", d2: "A bouquet catalogue with prices, a build-your-own bouquet, and WhatsApp orders. The owner changes prices, photos and every text from an admin panel.",
-  k3: "Salon & barbershop", d3: "Services and prices, the team, and booking in four taps: service, master, day, time.",
+  k3: "Salon & barbershop", d3: "Online booking that only offers free times: the site keeps each master's diary and never books one slot twice. In the admin panel the owner sees the bookings and changes prices, the team and every text.",
   c_menu: "Menu", c_book: "Table booking", c_cat: "Catalogue", c_deliv: "Delivery", c_wa: "WhatsApp orders", c_admin: "Admin panel",
   c_price: "Prices", c_masters: "Team", c_online: "Online booking", open: "Open the live site",
   fTitle: "What you get", fSub: "Everything a small business needs. Nothing it doesn't.",
