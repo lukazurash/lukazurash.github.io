@@ -140,7 +140,7 @@ h2 { font-size: clamp(2rem, 4vw, 3rem); line-height: 1.1; letter-spacing: -.03em
 .sec-head p { margin-top: .9rem; font-size: 1.125rem; color: var(--muted); }
 
 /* Work cards */
-.work { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.work { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
 .card {
   background: var(--card); border-radius: var(--r); overflow: hidden;
   box-shadow: var(--shadow); border: 1px solid var(--line);
@@ -199,19 +199,12 @@ h2 { font-size: clamp(2rem, 4vw, 3rem); line-height: 1.1; letter-spacing: -.03em
   .hero-in { grid-template-columns: 1fr; }
   .stack { max-width: 620px; width: 100%; margin-inline: auto; }
   .work, .grid { grid-template-columns: 1fr 1fr; }
-  .work .card:last-child { grid-column: 1 / -1; flex-direction: row; }
-  .work .card:last-child .shot { flex: 1.1; border-bottom: 0; border-right: 1px solid var(--line); }
-  .work .card:last-child .shot img { height: 100%; aspect-ratio: auto; object-position: left top; }
-  .work .card:last-child .card-body { flex: 1; }
 }
 @media (max-width: 680px) {
   .links { display: none; }
   .nav-end { margin-left: auto; }
   .wrap, .nav-in { width: calc(100% - 2rem); }
   .work, .grid, .steps { grid-template-columns: 1fr; }
-  .work .card:last-child { grid-column: auto; flex-direction: column; }
-  .work .card:last-child .shot { border-right: 0; border-bottom: 1px solid var(--line); }
-  .work .card:last-child .shot img { aspect-ratio: 16 / 10; }
   .cta .btn { flex: 1 1 auto; }
   .frame { border-radius: 10px; }
   .bar { height: 20px; gap: 4px; padding: 0 8px; }

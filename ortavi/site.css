@@ -1,0 +1,69 @@
+/* page CSS (Ortavi House): only what the kit lacks: the rooms grid, the list descriptions, the booking split */
+.rows .rows__name small { display: block; font-weight: 400; color: var(--muted); font-size: var(--t-body); line-height: 1.5; }
+
+/* rooms, dealt "side": the head is the first cell on the left line, three rooms on span-3 beside it */
+.room { display: grid; align-content: start; gap: var(--s-2); color: var(--ink); text-decoration: none; }
+.room__pic { aspect-ratio: 4 / 3; overflow: clip; border-radius: 0; margin-bottom: var(--s-3); }
+.room__pic > img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.room__facts, .room__price { margin: 0; font-size: var(--t-body); line-height: 1.5; }
+.room__facts { color: var(--muted); }
+.room__link { margin-top: var(--s-2); justify-self: start; }
+
+/* meals: two groups on span-3, the pair of 4:5 photographs on the right span-6, tops level with the labels */
+.meals .t-label { margin: 0 0 var(--s-3); }
+.meals .pl-photo > img { aspect-ratio: 4 / 5; width: 100%; height: auto; object-fit: cover; }
+
+/* booking: the photograph and the form the same height, the form on the surface ground */
+.booking__form { background: var(--p-surface); padding: var(--s-7); align-content: start; }
+.booking .pl-photo > img { aspect-ratio: 4 / 3; width: 100%; height: 100%; object-fit: cover; }
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  .rooms > .rooms__head, .rooms > .room { grid-column: span 6; }
+}
+@media (max-width: 639px) {
+  .rooms > .room { grid-column: 1 / -1; }
+  .meals > .span-3:not(.pl-photo) { grid-column: 1 / -1; }
+  .meals > .pl-photo { grid-column: 1 / -1; order: 2; }
+  #meals .meals > .pl-photo > img { aspect-ratio: 4 / 3; }
+  #booking .booking > .pl-photo > img { aspect-ratio: 4 / 5; }
+  .meals__g1 { order: 1; } .meals__g2 { order: 3; }
+  .booking__form { padding: var(--s-5); }
+  .room__pic { aspect-ratio: 16 / 9; }
+  #area:not(.is-live) .mo-ph__pic > img { aspect-ratio: 2 / 1; }
+}
+
+/* rooms: the photograph zooms inside its frame and the frame lifts 2px under the pointer (motion.md) */
+@media (hover: hover) and (pointer: fine) {
+  html:not([data-motion="off"]) .room__pic { transition: transform 240ms cubic-bezier(.2,.7,.2,1), box-shadow 240ms cubic-bezier(.2,.7,.2,1); }
+  html:not([data-motion="off"]) .room:hover .room__pic { transform: translateY(-2px); box-shadow: 0 14px 32px -18px rgb(42 29 23 / .45); }
+}
+.room:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+
+/* the head row sits 56px above the groups and the booking split */
+#meals .section-head, #booking .section-head { margin-bottom: 56px; }
+#meals .pl-photo > img { aspect-ratio: 2 / 3; }
+
+/* the name across the .wrap: sized so "Ortavi House" fits from line to line */
+.close__word { font-size: clamp(48px, 11.6vw, 168px); line-height: 1.05; padding-top: .06em; white-space: nowrap; overflow: visible; }
+@media (max-width: 639px) { .close__word { font-size: clamp(40px, 12.4vw, 96px); } }
+
+/* the tablet held upright (640 to 1023): each section inside its one screen */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .meals > .meals__g1, .meals > .meals__g2 { grid-column: span 6; }
+  .meals > .pl-photo { grid-column: span 6; }
+  #meals .pl-photo > img { aspect-ratio: 4 / 3; }
+  #visit .pl-photo { --pl-r: 1.6 !important; }
+}
+
+.visit .hours, .visit__address { margin: 0; }
+.rooms__all { grid-column: 1 / -1; margin-top: var(--s-5); }
+@media (min-width: 1024px) and (max-width: 1279px) { .room__pic { aspect-ratio: 1 / 1; } }
+@media (min-width: 640px) and (max-width: 1023px) {
+  #booking .pl-photo > img { aspect-ratio: 3 / 1; height: auto; }
+  .rooms .room__pic { aspect-ratio: 16 / 9; }
+  .booking__form { background: none; padding: 0; }
+  #area:not(.is-live) .mo-ph__list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  #area:not(.is-live) .mo-ph__pic > img { aspect-ratio: 16 / 10; max-height: none; }
+}
+
+.booking__rows { grid-column: 1 / -1; margin: 0; }
