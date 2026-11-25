@@ -12,9 +12,9 @@ document.documentElement.classList.remove("no-js");
 const EN = {
   skip: "Skip to work", brand: "Luka",
   nWork: "Work", nFeat: "What you get", nProc: "Process", nCta: "Get in touch",
-  eyebrow: "Cafés · Flower shops · Salons",
+  eyebrow: "Websites for any business",
   h1: "A website that brings you customers.",
-  lead: "I'm Luka. I build fast, beautiful websites for small businesses in Georgia: menus, prices, online booking, and orders that land straight in your WhatsApp.",
+  lead: "I'm Luka. I build fast, beautiful websites for any kind of business: menus, prices, online booking, and orders that land straight in your WhatsApp.",
   ctaWork: "See my work", ctaTalk: "Get in touch",
   wTitle: "Work", wSub: "Four live sites. Open one and try it the way your customers would.",
   k1: "Café & restaurant", d1: "Menu, events and online table booking. Every booking goes straight to the owner's phone.",
