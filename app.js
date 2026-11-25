@@ -37,7 +37,7 @@ const EN = {
   cTitle: "Let's build yours.", cSub: "Write to me and I'll gladly walk you through the price and details.",
   foot: "Luka · Tbilisi, Georgia",
   wa: "WhatsApp", ms: "Messenger", em: "Email", empty: "Contact details coming soon.",
-  title: "Luka — Websites for cafés, flower shops & salons",
+  title: "Luka — Websites for any business",
 };
 const KA = { wa: "WhatsApp", ms: "Messenger", em: "ელფოსტა", empty: "საკონტაქტო ინფორმაცია მალე დაემატება.", title: document.title };
 $$("[data-i18n]").forEach(el => KA[el.dataset.i18n] ??= el.textContent);
