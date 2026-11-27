@@ -148,6 +148,14 @@ h2 { font-size: clamp(2rem, 4vw, 3rem); line-height: 1.1; letter-spacing: -.03em
   transition: transform .5s var(--ease), box-shadow .5s var(--ease);
 }
 .card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+/* the featured card: the whole row, the screenshot beside the words on wide screens */
+.card--wide { grid-column: 1 / -1; }
+@media (min-width: 961px) {
+  .card--wide { flex-direction: row; }
+  .card--wide .shot { flex: 1.5 1 0; border-bottom: 0; border-right: 1px solid var(--line); }
+  .card--wide .card-body { flex: 1 1 0; justify-content: center; padding: 2rem 2.2rem; }
+  .card--wide h3 { font-size: 2rem; }
+}
 .shot { display: block; overflow: hidden; border-bottom: 1px solid var(--line); }
 .shot img { aspect-ratio: 16 / 10; object-fit: cover; object-position: top; transition: transform .8s var(--ease); }
 .card:hover .shot img { transform: scale(1.03); }

@@ -1,0 +1,169 @@
+/* page CSS (Sololaki 1907): only what the kit lacks. Client exceptions to the place rules, from the brief:
+   a dark bottle-green ground, the GSAP scroll layer (hero, rooms track) and the three.js key in the hero. */
+
+/* type: the theatre-poster serif carries the headings; italics only for the year in the name */
+h1, h2 { font-family: var(--font-display); font-weight: 400; letter-spacing: var(--display-tracking); }
+.close__word em { font-style: italic; color: var(--accent); }
+.rows .rows__name small { display: block; font-weight: 400; color: var(--muted); font-size: var(--t-body); line-height: 1.5; }
+
+/* the poster scale: bigger headings than the place default, the serif carrying the page */
+html[data-type="place"]:root { --t-h2: clamp(30px, 2.6vw + 10px, 52px); }
+h2 { line-height: 1.04; }
+
+/* hero: the words under the photograph on the green ground, the brass key at the right of that row
+   (selectors outrank layout.css's place hero rules) */
+html[data-type="place"] main .hero.hero--place { --photo: min(470px, 52svh); }
+html[data-type="place"] main .hero.hero--place .hero__text > h1 { grid-column: 1 / span 6; grid-row: 1 / span 2; font-size: clamp(40px, 4.6vw + 6px, 76px); line-height: 1; }
+html[data-type="place"] main .hero.hero--place .hero__text > .hero__side { grid-column: 7 / span 4; grid-row: 1 / span 2; align-self: stretch; display: grid; align-content: start; gap: var(--s-5); }
+html[data-type="place"] main .hero.hero--place .hero__text > h1 { align-self: stretch; }
+html[data-type="place"] main .hero.hero--place .hero__text > .hero__key { grid-column: 11 / -1; grid-row: 1 / span 2; }
+.hero__key { position: relative; }
+.key__still { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
+.hero__key.is-live .key__still { display: none; }
+.hero__key:not(.is-live) .key3d { display: none; }
+.key3d { position: relative; }
+.hero__key { align-self: start; justify-self: end; aspect-ratio: 3 / 4; width: 100%; max-width: 230px; margin-top: -56px; }
+.key3d { display: block; width: 100%; height: 100%; }
+.hero__bg { transform-origin: 50% 40%; will-change: transform; }
+@media (max-width: 1023px) {
+  html[data-type="place"] main .hero.hero--place .hero__text > .hero__key { display: none; }
+  html[data-type="place"] main .hero.hero--place .hero__text > :is(h1, .hero__side) { grid-column: auto; grid-row: auto; }
+}
+
+/* the house: text left, the photograph that develops on the right */
+.develop { margin: 0; overflow: hidden; height: min(680px, var(--pl-room)); }
+.develop > img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
+.house__text p:not(.t-lead) { max-width: 52ch; }
+@media (max-width: 1023px) { .develop { height: auto; aspect-ratio: 4 / 3; margin-top: var(--s-7); } }
+
+/* rooms: four rooms in a row; with the scroll layer on a desktop they become a pinned sideways track */
+#rooms .section-head { margin-bottom: 56px; }
+.rooms__track { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--gutter); }
+.room { display: grid; align-content: start; gap: var(--s-2); color: var(--ink); text-decoration: none; }
+.room__pic { aspect-ratio: 4 / 5; overflow: clip; margin-bottom: var(--s-3); }
+.room__pic > img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 400ms cubic-bezier(.2,.7,.2,1); }
+.room__facts, .room__price { margin: 0; font-size: var(--t-body); line-height: 1.5; }
+.room__facts { color: var(--muted); }
+.room__link { margin-top: var(--s-2); justify-self: start; }
+.room:focus-visible { outline: 2px solid var(--action); outline-offset: 4px; }
+@media (hover: hover) and (pointer: fine) {
+  html:not([data-motion="off"]) .room:hover .room__pic > img { transform: scale(1.03); }
+}
+/* the track (site.js adds .is-track only with GSAP, a wide screen and motion allowed): two screens of scroll,
+   the head and the row held with sticky inside the section's own box, the row moved sideways by the scroll */
+#rooms.is-track { --h: 2; }
+#rooms.is-track .rooms__pin { position: sticky; top: 0; height: 100svh; padding-top: var(--padt); overflow: hidden; }
+#rooms.is-track { padding-top: 0; padding-bottom: 0; }
+#rooms.is-track .rooms__track { display: flex; width: max-content; gap: var(--s-6); will-change: transform; }
+#rooms.is-track .room { width: min(34vw, 480px); }
+#rooms.is-track .room__pic { aspect-ratio: 4 / 3; }
+@media (min-width: 640px) and (max-width: 1023px) { .rooms__track { grid-template-columns: repeat(2, minmax(0, 1fr)); } #rooms { --h: 2; } }
+@media (max-width: 639px) { .rooms__track { grid-template-columns: 1fr; gap: var(--s-7); } #rooms { --hm: 3; } .room__pic { aspect-ratio: 16 / 10; } }
+
+/* the restaurant on the bone ground: three groups, then the strip of four dishes */
+.menu .t-label { margin: 0 0 var(--s-3); }
+#restaurant .section-head { margin-bottom: 56px; }
+.strip { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--gutter); }
+.strip { margin-top: var(--s-6); }
+.strip .pl-photo > img { aspect-ratio: 4 / 3; width: 100%; height: auto; object-fit: cover; border-radius: 0; }
+.menu__foot { display: flex; align-items: center; justify-content: space-between; gap: var(--s-5); margin-top: var(--s-7); }
+.menu__foot .t-lead { margin: 0; }
+@media (max-width: 1023px) { .strip { grid-template-columns: repeat(2, minmax(0, 1fr)); } .menu > .span-4 { grid-column: 1 / -1; } }
+@media (max-width: 639px) { #restaurant { --hm: 3; } }
+@media (min-width: 640px) and (max-width: 1023px) { #restaurant { --h: 2; } }
+
+/* the bar: the head with the wines beside it, then the pair of photographs */
+.bar__head { margin-bottom: 56px; }
+.pair .pl-photo > img { aspect-ratio: 3 / 2; width: 100%; height: auto; object-fit: cover; border-radius: 0; transition: transform 400ms cubic-bezier(.2,.7,.2,1); }
+.pair .pl-photo { overflow: clip; display: block; }
+@media (hover: hover) and (pointer: fine) { html:not([data-motion="off"]) .pair .pl-photo:hover > img { transform: scale(1.03); } }
+@media (max-width: 1023px) { .pair > .pl-photo { grid-column: span 6; } #bar { --h: 2; } }
+@media (max-width: 639px) { .pair > .pl-photo { grid-column: 1 / -1; } #bar { --hm: 2; } }
+
+/* questions */
+.faq .faq__item > .faq__q { margin: 0; font: 500 var(--t-card)/1.3 var(--font-text); color: var(--ink); }
+@media (max-width: 1023px) { #faq .faq { grid-column: 1 / -1; margin-top: var(--s-6); } }
+@media (max-width: 639px) { #faq { --hm: 2; } }
+
+/* booking: the form on the surface ground beside the photograph, the same height */
+#booking .section-head { margin-bottom: 56px; }
+.booking__form { background: var(--p-surface); padding: var(--s-6) var(--s-7); align-content: start; }
+.booking .pl-photo > img { aspect-ratio: 4 / 3; width: 100%; height: 100%; object-fit: cover; border-radius: 0; }
+.booking__kind { border: 0; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: var(--s-3) var(--s-6); }
+.booking__kind legend { font-size: 14px; margin-bottom: var(--s-2); padding: 0; }
+.booking__kind label { display: inline-flex; align-items: center; gap: var(--s-2); min-height: 44px; cursor: pointer; }
+.booking__kind input { appearance: none; margin: 0; width: 20px; height: 20px; border-radius: 50%; border: 1.5px solid var(--line-strong); background: transparent; display: grid; place-content: center; cursor: pointer; transition: border-color 160ms cubic-bezier(.2,.7,.2,1); }
+.booking__kind input::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--action); transform: scale(0); transition: transform 160ms cubic-bezier(.2,.7,.2,1); }
+.booking__kind input:checked { border-color: var(--action); }
+.booking__kind input:checked::before { transform: scale(1); }
+.booking__kind label:hover input { border-color: var(--ink); }
+.booking__note { margin: 0; font-size: 14px; color: var(--ink); }
+[data-kind="table"] [data-for="room"] { display: none; }
+@media (max-width: 1023px) { .booking .pl-photo { grid-column: 1 / -1; margin-top: var(--s-5); } .booking .pl-photo > img { aspect-ratio: 16 / 9; height: auto; } .booking__form { grid-column: 1 / -1; } }
+@media (max-width: 639px) { .booking__form { padding: var(--s-5); } #booking { --hm: 2; } }
+
+/* the name across the .wrap */
+.close__word { font-size: clamp(56px, 10vw, 144px); line-height: 1.05; padding-top: .02em; white-space: nowrap; }
+@media (max-width: 639px) { .close__word { font-size: clamp(44px, 14vw, 96px); } }
+.footer__address { display: block; color: var(--ink); text-decoration: none; line-height: 1; }
+.closing__links .hours { margin: 0; }
+.close--word .close__word { margin-bottom: 0; }
+
+/* the phone (measured at 390x844): each section on whole screens */
+@media (max-width: 639px) {
+  #rooms { --hm: 2; } .rooms__track { gap: var(--s-6); } .room__pic { aspect-ratio: 21 / 9; }
+  #restaurant { --hm: 2; }
+  #bar { --hm: 1; } .pair > .pl-photo:nth-child(2) { display: none; } .pair .pl-photo > img { aspect-ratio: 16 / 9; }
+  #faq { --hm: 1; } .faq > .faq__item:nth-child(n+5) { display: none; }
+  #booking .booking .pl-photo > img { aspect-ratio: 2 / 3; }
+  #area:not(.is-live) .mo-ph__pic > img { aspect-ratio: 2 / 1; height: auto; }
+  html main > section#area[data-moment]:not(.is-live) { height: auto; min-height: 200lvh; }
+}
+@media (max-width: 639px) {
+  .rooms__track { gap: var(--s-5); }
+  .develop { aspect-ratio: 16 / 9; margin-top: var(--s-5); }
+  #visit .pl-photo > img { aspect-ratio: 16 / 9; height: auto; max-height: none; }
+}
+@media (max-width: 639px) {
+  .rooms__track { gap: var(--s-4); }
+  #visit .pl-photo > img { aspect-ratio: 12 / 5; }
+}
+
+/* Georgian: wider letters, so the display sizes step down */
+html[lang="ka"][data-type="place"]:root { --t-h2: clamp(26px, 2vw + 10px, 42px); }
+html[lang="ka"][data-type="place"] main .hero.hero--place .hero__text > h1 { font-size: clamp(34px, 3.4vw + 6px, 58px); line-height: 1.12; }
+html[lang="ka"] .close__word { font-size: clamp(48px, 9vw, 132px); }
+
+.house__rows { margin: var(--s-4) 0 var(--s-2); }
+
+/* the browser's own surfaces, in the palette */
+::selection { background: var(--p-accent); color: #111; }
+html { scrollbar-color: color-mix(in oklab, var(--p-ink) 35%, var(--p-bg)) var(--p-bg); caret-color: var(--p-accent); }
+.rows__value, .hours dd, .room__price { font-variant-numeric: tabular-nums; }
+
+/* rows: air above each name as well as under it, so no text sits on the rule above */
+.rows > li { padding-bottom: 12px; }
+.rows > li + li { padding-top: 14px; }
+#restaurant .section-head { margin-bottom: 40px; }
+.strip { margin-top: var(--s-5); }
+/* the phone: the house's facts are already in its two paragraphs, so its list stays on wider screens */
+@media (max-width: 639px) { .house__rows { display: none; } #visit .pl-photo > img { aspect-ratio: 3 / 1; } }
+/* Georgian runs longer: the walks' photographs a little shorter at rest, the footer row spaced off the hours' lines */
+html[lang="ka"] #area:not(.is-live) .mo-ph__pic > img { aspect-ratio: 1 / 1; height: auto; }
+html[lang="ka"] .footer__nav { column-gap: var(--s-7); }
+/* the footer address is a link: a 44px target at every width */
+.footer__address { padding-block: 6px; min-height: 44px; }
+
+/* short windows (a laptop with its toolbars, a small browser pane): a section keeps its one or two screens,
+   but grows when its content needs more, so text never runs into the next section */
+html main > section.section:not([data-moment]),
+html footer.footer.closing,
+html main > section.hero { height: auto; min-height: calc(var(--h, 1) * 100svh); }
+@media (max-width: 639px) {
+  html main > section.section:not([data-moment]) { min-height: calc(var(--hm, 1) * 100lvh); }
+  html footer.footer.closing { min-height: calc(var(--hm, 1) * 100lvh); }
+}
+/* the footer fits one screen at 1440x900 without squeezing: tighter gaps, the name a little smaller */
+footer.closing > .wrap { row-gap: var(--s-6); }
+.footer__nav { margin-top: var(--s-6); }
+.close__word { font-size: clamp(56px, 9vw, 130px); }

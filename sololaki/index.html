@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en" data-type="place" data-radius="soft" data-buttons="arrow" data-motion>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sololaki 1907: a twelve-room hotel and restaurant in old Tbilisi</title>
+<meta name="description" content="Twelve rooms in a restored 1907 merchant's house in Sololaki, Tbilisi, with the Fig &amp; Ember courtyard restaurant and the After Dusk wine bar. Rooms from 245 ₾.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sololaki 1907: a twelve-room hotel in old Tbilisi">
+<meta property="og:description" content="A merchant's house from 1907, twelve rooms, a wood-fire restaurant under a fig tree. Rooms from 245 ₾ a night.">
+<meta property="og:image" content="share.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#0f372b">
+<!-- <link rel="canonical" href="https://(the hotel's domain)/"> once the domain is known -->
+<link rel="alternate" hreflang="en" href="index.html">
+<link rel="alternate" hreflang="ka" href="ka.html">
+<meta name="site-kind" content="other">
+<meta name="page-type" content="place">
+<meta name="page-kind" content="place">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wdth,wght@75..100,400..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/system.css">
+<link rel="stylesheet" href="assets/ui/cards.css">
+<link rel="stylesheet" href="assets/motion/motion.css">
+<link rel="stylesheet" href="assets/layout/layout.css">
+<style>
+:root {
+  --p-bg: #0f372b; --p-surface: #164536; --p-ink: #efe7da; --p-muted: #a8afa2;
+  --p-accent: #e8392b; --p-accent-ink: #111111; --p-action: #e8392b; --p-action-ink: #111111;
+  --p-inv-bg: #efe7da; --p-inv-surface: #dedacc; --p-inv-ink: #0f372b; --p-inv-muted: #4a6356;
+  --p-inv-accent: #e8392b; --p-inv-accent-ink: #111111; --p-inv-action: #b8281c; --p-inv-action-ink: #ffffff;
+  --font-display: "Instrument Serif", Georgia, serif;
+  --font-text: "Instrument Sans", system-ui, sans-serif;
+  --display-weight: 400;
+  --display-tracking: -0.012em;
+}
+</style>
+<script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
+<script>document.documentElement.classList.add('mo-js');setTimeout(()=>document.documentElement.classList.add('mo-safe'),2500)</script>
+<link rel="modulepreload" href="assets/moments/moments.js">
+<link rel="modulepreload" href="assets/moments/lib.js">
+<link rel="modulepreload" href="assets/moments/photo-chapters/moment.js">
+<link rel="modulepreload" href="assets/moments/picture-develops/moment.js">
+<link rel="stylesheet" href="site.css?v=13">
+</head>
+<body>
+<!-- type: place (a twelve-room boutique hotel with a restaurant and a wine bar in Sololaki, Tbilisi; site-kind other)
+     deal: hero place (printed), nav nav-split, footer footer-visit, rhythm surface-pairs (restaurant on the bone ground), buttons arrow, mark petal,
+           offer strip (the restaurant's dishes), place pair (the bar), type moment name (close-word), rooms row
+     palette: the client's own (start.mjs brand): bottle green #0f372b, bone #efe7da, vermilion #e8392b, from the brief; type instrument-serif (forced: the brief asks for a theatre-poster serif)
+     moments: picture-develops (#house), photo-chapters (#area)
+     client exceptions (brief): GSAP scroll layer (hero zoom, rooms track) and a three.js brass key in the hero; both rest under reduced motion -->
+<header class="nav nav--split">
+  <div class="wrap nav__bar">
+    <a class="skip-link" href="#top">Skip to content</a>
+    <nav class="nav__links" aria-label="Main">
+      <div class="nav__item"><a class="nav__link" href="#rooms">Rooms</a></div>
+      <div class="nav__item"><a class="nav__link" href="#restaurant">Restaurant</a></div>
+      <div class="nav__item"><a class="nav__link" href="#bar">Bar</a></div>
+      <div class="nav__item"><a class="nav__link" href="#visit">Visit</a></div>
+    </nav>
+    <a class="nav__logo" href="#top"><span class="mark" data-mark="petal" aria-hidden="true"></span>Sololaki 1907</a>
+    <div class="nav__actions">
+      <a class="nav__link" href="ka.html" lang="ka" hreflang="ka">ქართული</a>
+      <a class="btn btn--primary" href="#booking">Book a room</a>
+    </div>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-label="Menu"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 5h14M2 13h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero hero--place" data-enter aria-labelledby="hero-h">
+    <img class="hero__bg" src="assets/img/photo-f94618337-1600.jpg" srcset="assets/img/photo-f94618337-960.jpg 960w, assets/img/photo-f94618337-1600.jpg 1600w, assets/img/photo-f94618337-1920.jpg 1920w" sizes="(max-width: 639px) 185vw, 100vw" width="1600" height="1200" alt="A carved wooden balcony with red trim and stained-glass windows above an old brick wall covered in vines" fetchpriority="high" decoding="async" data-phone-fill data-source="stand-in" data-subject="stand-in" style="--ly-pos: 40% 30%">
+    <div class="wrap"><div class="hero-text">
+      <div class="hero__text">
+        <h1 id="hero-h">A twelve-room hotel in old Sololaki</h1>
+        <div class="hero__side"><p class="hero__lead">A merchant's house from 1907 in Tbilisi, with a wood-fire restaurant under its fig tree. Rooms from <span data-assumed>245 ₾</span>.</p>
+        <div class="btn-row"><a class="btn btn--primary" href="#booking">Book a room<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a></div></div>
+        <div class="hero__key" aria-hidden="true"><img class="key__still" src="key.png" width="400" height="532" alt="" decoding="async"><canvas class="key3d" width="200" height="266"></canvas></div>
+      </div>
+    </div></div>
+  </section>
+
+  <section class="section" id="visit" data-place="visit" aria-label="Visit">
+    <div class="wrap grid grid--top">
+      <div class="visit visit--card span-6">
+        <div class="visit__head"><p class="t-label muted">Visit</p></div>
+        <div class="visit__cols">
+          <div class="visit__col stack-4">
+            <address class="visit__address">Sololaki<br>Tbilisi</address>
+            <a class="link" href="https://www.openstreetmap.org/search?query=Sololaki%20Tbilisi">See the area</a>
+          </div>
+          <div class="visit__col">
+            <dl class="hours" data-assumed><dt>Check-in</dt><dd>from 14:00</dd><dt>Check-out</dt><dd>by 12:00</dd><dt>Breakfast</dt><dd>8:00 to 10:30</dd></dl>
+          </div>
+        </div>
+        <ul class="visit__rows">
+          <li><span>From the airport</span><span>40 minutes; our driver meets you for <span data-assumed>70 ₾</span></span></li>
+          <li><span>Parking</span><span>None at the house; a public garage is 3 minutes away</span></li>
+        </ul>
+      </div>
+      <figure class="pl-photo span-6 start-7" style="--pl-r: 1"><img src="assets/img/photo-f94618996-960.jpg" srcset="assets/img/photo-f94618996-500.jpg 500w, assets/img/photo-f94618996-960.jpg 960w, assets/img/photo-f94618996-1600.jpg 1600w" sizes="(min-width: 1024px) 800px, 100vw" width="960" height="720" alt="Old stone steps climbing between brick walls and vines in old Tbilisi" loading="lazy" decoding="async" data-source="stand-in" data-subject="stand-in" style="--pos: 100% 50%"></figure>
+    </div>
+  </section>
+
+  <section class="section" id="house" aria-labelledby="house-h">
+    <div class="wrap grid grid--top">
+      <div class="span-6 house__text stack-5">
+        <h2 id="house-h">The house, built in 1907</h2>
+        <p class="t-lead">A wine merchant built it in 1907, with a carved staircase, painted ceilings and a balcony wide enough for dinner. It was flats for most of the last century.</p>
+        <p>We spent three years taking it back: the ceilings cleaned by hand, the staircase rebuilt from its own oak, the courtyard cleared down to the fig tree. There is no lift. Rooms are on three floors and the attic is up 54 steps.</p>
+        <ul class="visit__rows house__rows">
+          <li><span>Built</span><span>1907, for a wine merchant</span></li>
+          <li><span>Restored</span><span>2023 to 2026, by hand</span></li>
+          <li><span>Rooms</span><span>12, on three floors around the courtyard</span></li>
+        </ul>
+        <a class="link" href="#rooms">See the rooms<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+      </div>
+      <figure class="develop span-6 start-7" data-moment="picture-develops"><img src="assets/img/photo-f160931126-960.jpg" srcset="assets/img/photo-f160931126-500.jpg 500w, assets/img/photo-f160931126-960.jpg 960w, assets/img/photo-f160931126-1600.jpg 1600w" sizes="(min-width: 1024px) 980px, 100vw" alt="A long first-floor balcony with grey-blue carved railings and tall wooden doors behind" width="960" height="671" loading="lazy" data-source="stand-in" data-subject="stand-in"></figure>
+    </div>
+  </section>
+
+  <section class="section" id="rooms" aria-labelledby="rooms-h">
+    <div class="wrap rooms__pin">
+        <div class="section-head">
+          <h2 id="rooms-h">Rooms and prices</h2>
+          <p>Breakfast is in every price. Check-in from 14:00, check-out by 12:00.</p>
+        </div>
+        <div class="rooms__track">
+          <a class="room" id="room-courtyard" href="#booking" data-room="Courtyard double room">
+            <div class="room__pic"><img src="assets/img/photo-m61856012-960.jpg" srcset="assets/img/photo-m61856012-500.jpg 500w, assets/img/photo-m61856012-960.jpg 960w" sizes="(min-width: 1024px) 40vw, 100vw" width="960" height="640" alt="A striped linen pillow on a white bed, a wall lamp and window light behind" loading="lazy" data-source="library-057" data-subject="detail" style="object-position: 65% 55%"></div>
+            <h3 class="t-card">Courtyard double room</h3>
+            <p class="room__facts">2 guests · 22 m² · over the fig tree</p>
+            <p class="room__price">from <span data-assumed>245 ₾</span> a night</p>
+            <span class="link room__link">Book this room<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></span>
+          </a>
+          <a class="room" id="room-balcony" href="#booking" data-room="Balcony double room">
+            <div class="room__pic"><img src="assets/img/photo-m61880133-960.jpg" srcset="assets/img/photo-m61880133-500.jpg 500w, assets/img/photo-m61880133-960.jpg 960w" sizes="(min-width: 1024px) 40vw, 100vw" width="960" height="1455" alt="Cushions on a window seat under a white blind, a small lamp on the sill" loading="lazy" data-source="library-057" data-subject="detail"></div>
+            <h3 class="t-card">Balcony double room</h3>
+            <p class="room__facts">2 guests · 26 m² · carved balcony on the street</p>
+            <p class="room__price">from <span data-assumed>290 ₾</span> a night</p>
+            <span class="link room__link">Book this room<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></span>
+          </a>
+          <a class="room" id="room-attic" href="#booking" data-room="Attic family room">
+            <div class="room__pic"><img src="assets/img/photo-m61847874-960.jpg" srcset="assets/img/photo-m61847874-500.jpg 500w, assets/img/photo-m61847874-960.jpg 960w" sizes="(min-width: 1024px) 40vw, 100vw" width="960" height="768" alt="Grey linen on an unmade bed against white boarded walls" loading="lazy" data-source="library-057" data-subject="detail" style="object-position: 70% 60%"></div>
+            <h3 class="t-card">Attic family room</h3>
+            <p class="room__facts">3 guests · 38 m² · roof window towards Narikala</p>
+            <p class="room__price">from <span data-assumed>365 ₾</span> a night</p>
+            <span class="link room__link">Book this room<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></span>
+          </a>
+          <a class="room" id="room-merchant" href="#booking" data-room="The merchant's room">
+            <div class="room__pic"><img src="assets/img/photo-m61777177-960.jpg" srcset="assets/img/photo-m61777177-500.jpg 500w, assets/img/photo-m61777177-960.jpg 960w" sizes="(min-width: 1024px) 40vw, 100vw" width="960" height="623" alt="Folded wool blankets in grey and lime on a dark wooden table in warm light" loading="lazy" data-source="library-057" data-subject="detail" style="object-position: 45% 50%"></div>
+            <h3 class="t-card">The merchant's room</h3>
+            <p class="room__facts">2 guests · 52 m² · the painted ceiling</p>
+            <p class="room__price">from <span data-assumed>470 ₾</span> a night</p>
+            <span class="link room__link">Book this room<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></span>
+          </a>
+        </div>
+    </div>
+  </section>
+
+  <section class="section ground-inverse" id="restaurant" aria-labelledby="restaurant-h">
+    <div class="wrap">
+      <div class="section-head section-head--split">
+        <div><h2 id="restaurant-h">Fig &amp; Ember, the courtyard restaurant</h2><p>30 seats under the fig tree, cooked over vine wood. Open to everyone, not only our guests.</p></div>
+        <a class="link" href="#booking" data-book="table">Book a table<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+      </div>
+        <div class="grid menu">
+          <div class="span-4">
+            <p class="t-label">From the fire</p>
+            <ul class="rows">
+              <li><span class="rows__name">Aragvi trout<small>Over vine embers, tarragon butter</small></span><span class="rows__value" data-assumed>38 ₾</span></li>
+              <li><span class="rows__name">Chakapuli<small>Lamb with tarragon and green plum</small></span><span class="rows__value" data-assumed>34 ₾</span></li>
+              <li><span class="rows__name">Imeretian cheese<small>Charred on the grill, mountain honey</small></span><span class="rows__value" data-assumed>22 ₾</span></li>
+            </ul>
+          </div>
+          <div class="span-4">
+            <p class="t-label">From the clay oven</p>
+            <ul class="rows">
+              <li><span class="rows__name">Tonis puri<small>Bread from the tone, still hot</small></span><span class="rows__value" data-assumed>4 ₾</span></li>
+              <li><span class="rows__name">Badrijani<small>Aubergine rolled with walnut</small></span><span class="rows__value" data-assumed>18 ₾</span></li>
+              <li><span class="rows__name">Fig leaf ice cream<small>With roasted figs in season</small></span><span class="rows__value" data-assumed>14 ₾</span></li>
+            </ul>
+          </div>
+          <div class="span-4">
+            <p class="t-label">Tasting dinner</p>
+            <ul class="rows">
+              <li><span class="rows__name">Five courses<small>Thursday to Sunday, 19:30</small></span><span class="rows__value" data-assumed>145 ₾</span></li>
+              <li><span class="rows__name">With wine pairing<small>Five glasses from Kakheti and Racha</small></span><span class="rows__value" data-assumed>230 ₾</span></li>
+              <li><span class="rows__name">Dinner<small>Tuesday to Sunday</small></span><span class="rows__value" data-assumed>18:00 to 23:00</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="strip">
+          <figure class="pl-photo"><img src="assets/img/photo-f102329199-960.jpg" srcset="assets/img/photo-f102329199-500.jpg 500w, assets/img/photo-f102329199-960.jpg 960w" sizes="(min-width: 1024px) 282px, 50vw" width="960" height="722" alt="Chashushuli, beef stewed with tomato and herbs in a black clay pan on a wooden board" loading="lazy" data-source="stand-in" data-subject="stand-in"></figure>
+          <figure class="pl-photo"><img src="assets/img/photo-f15063493-960.jpg" srcset="assets/img/photo-f15063493-500.jpg 500w, assets/img/photo-f15063493-960.jpg 960w" sizes="(min-width: 1024px) 282px, 50vw" width="960" height="722" alt="Meat and peppers cooking over a wood-burning stove with smoke rising" loading="lazy" data-source="stand-in" data-subject="stand-in" style="object-position: 70% 50%"></figure>
+          <figure class="pl-photo"><img src="assets/img/photo-f48688141-960.jpg" srcset="assets/img/photo-f48688141-500.jpg 500w, assets/img/photo-f48688141-960.jpg 960w" sizes="(min-width: 1024px) 282px, 50vw" width="960" height="960" alt="Round loaves of bread baking on the inside wall of a clay tone oven" loading="lazy" data-source="stand-in" data-subject="stand-in"></figure>
+          <figure class="pl-photo"><img src="assets/img/photo-f39350196-960.jpg" srcset="assets/img/photo-f39350196-500.jpg 500w, assets/img/photo-f39350196-960.jpg 960w" sizes="(min-width: 1024px) 282px, 50vw" width="960" height="640" alt="A bowl of walnut sauce topped with pomegranate seeds" loading="lazy" data-source="stand-in" data-subject="stand-in"></figure>
+        </div>
+    </div>
+  </section>
+
+  <section class="section" id="bar" aria-labelledby="bar-h">
+    <div class="wrap">
+      <div class="grid grid--top bar__head">
+        <div class="span-6 stack-4">
+          <h2 id="bar-h">After Dusk, the wine bar</h2>
+          <p class="t-lead">On the ground floor, by the old cellar door. Open every evening <span data-assumed>17:00 to 01:00</span>, walk-ins welcome.</p>
+        </div>
+        <div class="span-6 start-7">
+          <ul class="rows">
+            <li><span class="rows__name">Saperavi, Kakheti<small>Dry, dark, made in qvevri</small></span><span class="rows__value" data-assumed>16 ₾ a glass</span></li>
+            <li><span class="rows__name">Rkatsiteli amber, Kakheti<small>Six months on its skins</small></span><span class="rows__value" data-assumed>14 ₾ a glass</span></li>
+            <li><span class="rows__name">Khvanchkara, Racha<small>Semi-sweet red from the hills</small></span><span class="rows__value" data-assumed>18 ₾ a glass</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="grid pair">
+        <a class="pl-photo span-6" href="#booking" data-book="table"><img src="assets/img/photo-f45817333-960.jpg" srcset="assets/img/photo-f45817333-500.jpg 500w, assets/img/photo-f45817333-960.jpg 960w" sizes="(min-width: 1024px) 588px, 100vw" width="960" height="640" alt="A long bar lit in warm red with leather stools and wine racks behind" loading="lazy" data-source="stand-in" data-subject="stand-in"></a>
+        <a class="pl-photo span-6" href="#booking" data-book="table"><img src="assets/img/photo-f64160499-500.jpg" srcset="assets/img/photo-f64160499-500.jpg 500w" sizes="(min-width: 1024px) 588px, 100vw" width="500" height="667" alt="A stone wine cellar floor with the round mouths of buried qvevri jars" loading="lazy" data-source="stand-in" data-subject="stand-in" style="object-position: 50% 70%"></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="area" data-moment="photo-chapters" aria-labelledby="area-h">
+    <div class="wrap mo-ph">
+      <div class="mo-ph__head"><h2 id="area-h">Four walks of 12 minutes or less</h2><p>Everything here is downhill from the house, and a taxi back up costs about <span data-assumed>6 ₾</span>.</p></div>
+      <ol class="mo-ph__list">
+        <li class="mo-ph__ch">
+          <figure class="mo-ph__pic"><img loading="lazy" src="assets/img/photo-f4987174-960.jpg" srcset="assets/img/photo-f4987174-500.jpg 500w, assets/img/photo-f4987174-960.jpg 960w" sizes="100vw" alt="The brick domes of the sulphur baths with Narikala fortress on the hill above" width="960" height="720"></figure>
+          <h3>The sulphur baths, 9 minutes</h3>
+          <p>Book a private room at the baths for the evening. We call ahead for you and bring towels.</p>
+        </li>
+        <li class="mo-ph__ch">
+          <figure class="mo-ph__pic"><img loading="lazy" src="assets/img/photo-f107205946-500.jpg" srcset="assets/img/photo-f107205946-500.jpg 500w" sizes="100vw" alt="A waterfall dropping into a narrow green gorge in the old town" width="500" height="746" style="object-position: 50% 40%"></figure>
+          <h3>Leghvtakhevi waterfall, 12 minutes</h3>
+          <p>Walk past the baths into the gorge. Go in the morning, before the tours.</p>
+        </li>
+        <li class="mo-ph__ch">
+          <figure class="mo-ph__pic"><img loading="lazy" src="assets/img/photo-f81040426-500.jpg" srcset="assets/img/photo-f81040426-500.jpg 500w" sizes="100vw" alt="The roofs of old Tbilisi from above, red and grey among trees" width="500" height="333"></figure>
+          <h3>The cable car to Narikala, 7 minutes</h3>
+          <p>Up to the fortress for the whole city at once, then walk down through the botanical garden.</p>
+        </li>
+        <li class="mo-ph__ch">
+          <figure class="mo-ph__pic"><img loading="lazy" src="assets/img/photo-f106535071-960.jpg" srcset="assets/img/photo-f106535071-500.jpg 500w, assets/img/photo-f106535071-960.jpg 960w" sizes="100vw" alt="A narrow old town street at night, lamps lit and people at café tables" width="960" height="640"></figure>
+          <h3>The old town after dark, 10 minutes</h3>
+          <p>Ten minutes of lamp-lit streets, then back up the hill to After Dusk for the last glass.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" id="faq" aria-labelledby="faq-h">
+    <div class="wrap grid grid--top">
+      <div class="span-5 stack-4">
+        <h2 id="faq-h">Questions before you come</h2>
+        <p>Anything else, ask on WhatsApp. We answer the same day.</p>
+      </div>
+      <div class="faq span-6 start-7">
+        <div class="faq__item"><p class="faq__q">Cancellation</p><p data-assumed>Free up to 7 days before you arrive. After that we keep the first night.</p></div>
+        <div class="faq__item"><p class="faq__q">Breakfast</p><p>In every room price, 8:00 to 10:30 in Fig &amp; Ember.</p></div>
+        <div class="faq__item"><p class="faq__q">Children and pets</p><p>Children are welcome and cots are free. Dogs on request, in the courtyard rooms.</p></div>
+        <div class="faq__item"><p class="faq__q">Wi-Fi and air conditioning</p><p>In every room, and the walls are 70 cm thick, so the rooms stay quiet.</p></div>
+        <div class="faq__item"><p class="faq__q">Day trips</p><p>Mtskheta, the Kakheti wineries and Kazbegi, with our driver. Ask for the price on WhatsApp.</p></div>
+        <div class="faq__item"><p class="faq__q">Stairs and the lift</p><p>There is no lift: three floors and a staircase from 1907. Ask for a courtyard room if stairs are hard.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="booking" aria-labelledby="booking-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="booking-h">Book a room or a table</h2>
+        <p>Best rate when you book with us. Your request opens in WhatsApp with everything written in, and no card is needed.</p>
+      </div>
+      <div class="grid booking">
+        <form class="form booking__form span-6" action="https://wa.me/" method="get" target="_blank" data-whatsapp novalidate>
+          <input type="hidden" name="text" value="">
+          <fieldset class="field field--full booking__kind">
+            <legend>What to book</legend>
+            <label><input type="radio" name="kind" value="room" checked> A room</label>
+            <label><input type="radio" name="kind" value="table"> A table at Fig &amp; Ember</label>
+          </fieldset>
+          <div class="field" data-for="room"><label for="f-room">Room</label>
+            <select id="f-room" data-name="room">
+              <option>Courtyard double room</option><option>Balcony double room</option><option>Attic family room</option><option>The merchant's room</option>
+            </select></div>
+          <div class="field"><label for="f-guests" data-label-room="Guests" data-label-table="People">Guests</label>
+            <input id="f-guests" data-name="guests" type="text" inputmode="numeric" autocomplete="off" pattern="[0-9]{1,2}" required aria-describedby="f-guests-err">
+            <p class="field__error" id="f-guests-err" hidden>Write how many people, as a number.</p></div>
+          <div class="field"><label for="f-arrive" data-label-room="Arrival" data-label-table="Date">Arrival</label>
+            <input id="f-arrive" data-name="arrive" type="text" autocomplete="off" placeholder="12 May" required aria-describedby="f-arrive-err">
+            <p class="field__error" id="f-arrive-err" hidden>Write the day you arrive.</p></div>
+          <div class="field"><label for="f-leave" data-label-room="Departure" data-label-table="Time">Departure</label>
+            <input id="f-leave" data-name="leave" type="text" autocomplete="off" placeholder="15 May" required aria-describedby="f-leave-err">
+            <p class="field__error" id="f-leave-err" hidden>Write the day you leave.</p></div>
+          <div class="field field--full"><label for="f-name">Name</label>
+            <input id="f-name" data-name="name" type="text" autocomplete="name" required aria-describedby="f-name-err">
+            <p class="field__error" id="f-name-err" hidden>Write the name the booking is under.</p></div>
+          <div class="btn-row"><button class="btn btn--primary" type="submit">Book a room<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></button></div>
+          <p class="form__status" role="status" data-form-status></p>
+        </form>
+        <figure class="pl-photo span-6 start-7"><img src="assets/img/photo-d88-960.jpg" srcset="assets/img/photo-d88-500.jpg 500w, assets/img/photo-d88-960.jpg 960w" sizes="(min-width: 1024px) 588px, 100vw" width="960" height="1315" alt="A cream ceramic lamp on a side table, low sun throwing long shadows across the wall" loading="lazy" data-source="library-057" data-subject="detail"></figure>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer closing footer--visit" id="contact" aria-labelledby="close-h">
+  <div class="wrap">
+    <div class="closing__cta close--word">
+      <div class="section-head--split">
+        <div><h2 id="close-h">Twelve rooms in Sololaki from <span data-assumed>245 ₾</span></h2><p class="t-lead">Breakfast included. We answer on WhatsApp the same day.</p></div>
+        <a class="btn btn--primary" href="#booking">Book a room<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+      </div>
+      <p class="close__word" aria-hidden="true">Sololaki <em>1907</em></p>
+    </div>
+    <div class="closing__links">
+      <div class="grid">
+        <div class="span-6 stack-4">
+          <a class="footer__address" href="https://www.openstreetmap.org/search?query=Sololaki%20Tbilisi">Sololaki, Tbilisi</a>
+          <p>Ten minutes on foot from Freedom Square, up the hill.</p>
+        </div>
+        <div class="span-6 start-7">
+          <dl class="hours" data-assumed><dt>Hotel</dt><dd>reception day and night</dd><dt data-days="tue-sun">Fig &amp; Ember</dt><dd>18:00 to 23:00</dd><dt>After Dusk</dt><dd>17:00 to 01:00</dd></dl>
+        </div>
+      </div>
+      <nav class="footer__nav" aria-label="Footer">
+        <a href="#rooms">Rooms</a><a href="#restaurant">Restaurant</a><a href="#bar">Bar</a><a href="#area">The neighbourhood</a><a href="#faq">Questions</a><a href="ka.html" lang="ka" hreflang="ka">ქართული</a>
+      </nav>
+      <div class="footer__legal">
+        <span>&copy; 2026 Sololaki 1907</span>
+        <a class="credits" href="credits.html">Photographs via Wikimedia Commons</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<nav class="actionbar" aria-label="Quick actions">
+  <a class="btn btn--primary" href="#booking">Book a room</a>
+</nav>
+<script type="module" src="assets/system.js"></script>
+<script type="module" src="assets/motion/motion.js"></script>
+<script type="module" src="assets/layout/layout.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script type="module" src="site.js?v=2"></script>
+</body>
+</html>
